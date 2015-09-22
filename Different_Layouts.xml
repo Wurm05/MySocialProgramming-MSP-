@@ -1,0 +1,200 @@
+different Layouts
+
+
+---------------------------------------------------------------
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp" 
+
+    android:background="@color/grey"
+    android:orientation="vertical" >
+ 
+
+    <CalendarView
+        android:id="@+id/calendar"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" /> 
+</LinearLayout>
+
+--------------------------------------------------------------------
+
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="transparent" type="color">#00FFFFFF</item>
+    <item name="grey" type="color">#555555</item>
+    <item name="green" type="color">#4499CC00</item>
+    <item name="darkgreen" type="color">#FF669900</item> 
+</resources>
+
+--------------------------------------------------------------------
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<ViewGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@[+][package:]id/resource_name"
+    android:layout_height=["dimension" | "fill_parent" | "wrap_content"]
+    android:layout_width=["dimension" | "fill_parent" | "wrap_content"]
+    [ViewGroup-specific attributes] >
+    <View
+        android:id="@[+][package:]id/resource_name"
+        android:layout_height=["dimension" | "fill_parent" | "wrap_content"]
+        android:layout_width=["dimension" | "fill_parent" | "wrap_content"]
+        [View-specific attributes] >
+        <requestFocus/>
+    </View>
+    <ViewGroup >
+        <View />
+    </ViewGroup>
+    <include layout="@layout/layout_resource"/>
+</ViewGroup>
+
+
+---------------------------------------------------------------------
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:gravity="center"
+  android:orientation="vertical"
+  android:id="@+id/calendar_all">
+  
+
+  
+  <LinearLayout android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_alignParentTop="true"
+                                android:id="@+id/calendar_top">
+        <LinearLayout android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal" 
+                                        android:weightSum="2.0">
+                <TextView android:layout_height="40dp"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="0.5"
+                                        android:background="@drawable/calendar_tab_deep_color"
+                                        android:id="@+id/calendar_left_tab"
+                                        android:gravity="center_vertical|center_horizontal"
+                                        android:textSize="@dimen/calendar_tab_text_size"
+                                        android:text="x?">
+                </TextView>
+                <TextView android:layout_height="40dp"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1.0"
+                                        android:background="@drawable/calendar_tab_shallow_color"
+                                        android:id="@+id/calendar_center_tab"
+                                        android:gravity="center"
+                                        android:textSize="@dimen/calendar_tab_text_size"
+                                        android:text="x?x?">
+                </TextView>
+        
+            <TextView android:layout_height="40dp"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="0.5"
+                                        android:background="@drawable/calendar_tab_deep_color"
+                                        android:id="@+id/calendar_right_tab"
+                                        android:gravity="center_vertical|center_horizontal"
+                                        android:textSize="@dimen/calendar_tab_text_size"
+                                        android:text="x?">
+                </TextView>
+        </LinearLayout>
+        
+        <LinearLayout android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal"
+                                        android:background="@drawable/calendar_week_background">
+                <TextView android:layout_width="0dp"
+                                        android:layout_height="@dimen/calendar_week_height"
+                                        android:layout_weight="1.0"
+                                        android:id="@+id/calendar_week_sunday"
+                                        android:text="?"
+                                        android:gravity="center"
+                                        android:textColor="@android:color/white">
+                </TextView>
+                <TextView android:layout_width="0dp"
+                                        android:layout_height="@dimen/calendar_week_height"
+                                        android:layout_weight="1.0"
+                                        android:id="@+id/calendar_week_sunday"
+                                        android:text="?"
+                                        android:gravity="center"
+                                        android:textColor="@android:color/white">
+                </TextView>
+                <TextView android:layout_width="0dp"
+                                        android:layout_height="@dimen/calendar_week_height"
+                                        android:layout_weight="1.0"
+                                        android:id="@+id/calendar_week_sunday"
+                                        android:text="?"
+                                        android:gravity="center"
+                                        android:textColor="@android:color/white">
+                </TextView>
+                <TextView android:layout_width="0dp"
+                                        android:layout_height="@dimen/calendar_week_height"
+                                        android:layout_weight="1.0"
+                                        android:id="@+id/calendar_week_sunday"
+                                        android:text="?"
+                                        android:gravity="center"
+                                        android:textColor="@android:color/white">
+                </TextView>
+                <TextView android:layout_width="0dp"
+                                        android:layout_height="@dimen/calendar_week_height"
+                                        android:layout_weight="1.0"
+                                        android:id="@+id/calendar_week_sunday"
+                                        android:text="?"
+                                        android:gravity="center"
+                                        android:textColor="@android:color/white">
+                </TextView>
+                <TextView android:layout_width="0dp"
+                                        android:layout_height="@dimen/calendar_week_height"
+                                        android:layout_weight="1.0"
+                                        android:id="@+id/calendar_week_sunday"
+                                        android:text="?"
+                                        android:gravity="center"
+                                        android:textColor="@android:color/white">
+                </TextView>
+                 <TextView android:layout_width="0dp"
+                                        android:layout_height="@dimen/calendar_week_height"
+                                        android:layout_weight="1.0"
+                                        android:id="@+id/calendar_week_sunday"
+                                        android:text="?"
+                                        android:gravity="center"
+                                        android:textColor="@android:color/white"
+                                        >
+                </TextView>
+  
+        </LinearLayout>
+  </LinearLayout>
+
+        <android.gesture.GestureOverlayView
+                android:id="@+id/calendar_gesture_view" 
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" 
+                android:gestureStrokeType="single"
+                android:gestureColor="@android:color/transparent">
+  
+  <ustc.sse.assistant.calendar.utils.CalendarGridView
+                         android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:id="@+id/calendar_gridView"
+                                android:numColumns="7" 
+                    android:padding="0dp" 
+                    android:horizontalSpacing="1dp"
+                    android:verticalSpacing="1dp"
+                    android:layout_marginLeft="2dp"
+                    android:scrollbars="none"
+                    android:scrollbarStyle="insideOverlay"                 
+                    android:scrollbarAlwaysDrawVerticalTrack="false"
+                    android:scrollbarAlwaysDrawHorizontalTrack="false"
+                    android:fadeScrollbars="true"
+                    android:layout_weight="1.0"
+                    android:layoutAnimation="@anim/layout_grid_fade"
+                    >
+  </ustc.sse.assistant.calendar.utils.CalendarGridView>
+  </android.gesture.GestureOverlayView>
+   
+</LinearLayout>
