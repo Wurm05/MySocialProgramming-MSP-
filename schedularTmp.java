@@ -1,5 +1,5 @@
 
-//Alarm system
+//Alarm system examples:
 
 Calendar cal = Calendar.getInstance();
 
