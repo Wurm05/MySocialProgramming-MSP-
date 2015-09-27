@@ -7,6 +7,7 @@ import android.view.MenuItem;
 import android.widget.CalendarView;
 import android.widget.CalendarView.OnDateChangeListener;
 import android.widget.Toast;
+import android.app.Activity;
 
 public class MainActivity extends ActionBarActivity {
     CalendarView calendar;
