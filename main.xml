@@ -3,8 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.calendar.app.MainActivity" >
     
-    <item android:id="@+id/action_settings"
-        android:title="@string/action_settings"
-        android:orderInCategory="100"
-        app:showAsAction="never" />
+    <item android:id="@+id/action_todo" android:title="To-Do" />
+    <item android:id="@+id/action_weather" android:title="Weather" />
+    <item android:id="@+id/action_settings" android:title="Settings"/> <!--sync and set alarm-->
 </menu>
