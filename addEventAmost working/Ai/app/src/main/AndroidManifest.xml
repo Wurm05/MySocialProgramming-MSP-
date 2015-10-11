@@ -32,6 +32,7 @@
             </intent-filter>
         </activity>
 
+
         <activity
             android:name=".CalenderActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
@@ -55,5 +56,11 @@
         </activity>
 
     </application>
+
+
+
+
+
+
 
 </manifest>

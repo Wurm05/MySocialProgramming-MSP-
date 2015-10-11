@@ -134,6 +134,7 @@ public class CalenderActivity extends Activity implements OnClickListener {
 		switch (v.getId()) {
 			case R.id.btn_weather:
 				startActivity(new Intent(CalenderActivity.this,WeatherActivity.class));
+
 				break;
 
 			default:

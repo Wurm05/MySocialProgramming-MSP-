@@ -10,7 +10,7 @@
         android:id="@+id/LinearLayout01"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#eeeeee"
+        android:background="#000000"
         android:gravity="center"
         android:orientation="vertical"
         android:padding="15dp" >
@@ -30,7 +30,6 @@
         android:id="@+id/LinearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#EEEEEE"
         android:gravity="right"
         android:orientation="vertical"
         android:padding="15dp" >
@@ -52,7 +51,31 @@
     <ListView
         android:id="@+id/lv_android"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="273dp" >
     </ListView>
+
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:padding="10dp"
+        android:text="Add event"
+        android:textColor="#ffffff"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal" />
+    <Button
+        android:id="@+id/update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:text="update"
+        android:textColor="#ffffff"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="22dp" />
 
 </LinearLayout>
