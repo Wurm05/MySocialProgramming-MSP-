@@ -1,5 +1,6 @@
 package com.androidfromhome.calendar;
 
+import java.text.DateFormat;
 import java.util.ArrayList;
 
 import com.androidfromhome.calendar.R;
@@ -13,6 +14,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.ListView;
 
 
@@ -24,31 +27,36 @@ public class ListViewActivity extends Activity implements OnClickListener {
 	private Button btn_calender;
 	private Button 	btn_addEvent;
 	private Button 	btn_update;
-
+	DatePicker datePicker;
+	EditText mEdit;
+	int day;
+	int month;
+	int year;
 
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_list_view);
+
 		CalendarCollection.date_collection_arr=new ArrayList<CalendarCollection>();
 
-		CalendarCollection.date_collection_arr.add(new CalendarCollection("2015-04-01","John Birthday"));
-		CalendarCollection.date_collection_arr.add(new CalendarCollection("2015-04-01", "Birthday"));
-
+		CalendarCollection.date_collection_arr.add(new CalendarCollection("2015-04-01", "John Birthday"));
 
 
 		getWidget();
+
 	}
 
 
 	
 	public void getWidget(){
+		mEdit   = (EditText)findViewById(R.id.event);
+
+
 		btn_calender = (Button) findViewById(R.id.btn_calender);
 		btn_calender.setOnClickListener(this);
 
-		btn_addEvent = (Button) findViewById(R.id.button2);
-		btn_addEvent.setOnClickListener(this);
 
 		btn_update = (Button) findViewById(R.id.update);
 		btn_update.setOnClickListener(this);
@@ -62,6 +70,8 @@ public class ListViewActivity extends Activity implements OnClickListener {
 
 
 
+
+
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
@@ -69,11 +79,13 @@ public class ListViewActivity extends Activity implements OnClickListener {
 		case R.id.btn_calender:
 			startActivity(new Intent(ListViewActivity.this, CalenderActivity.class));
 			break;
-		case R.id.button2:
-			startActivity(new Intent(ListViewActivity.this, AddEventActivity.class));
-			break;
+
 		case R.id.update:
-			CalendarCollection.date_collection_arr.add(new CalendarCollection("2015-04-01", "Birthday"));
+			datePicker = (DatePicker) findViewById(R.id.datePicker2);
+			day = datePicker.getDayOfMonth();
+			month = datePicker.getMonth();
+			year = datePicker.getYear();
+			CalendarCollection.date_collection_arr.add(new CalendarCollection(""+year+"-"+month+"-"+day+"", mEdit.getText().toString()));
 			getWidget();
 			break;
 

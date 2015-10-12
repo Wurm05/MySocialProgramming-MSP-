@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.androidfromhome.calendar.ListViewActivity" >
+    tools:context="com.androidfromhome.calendar.ListViewActivity"
+    android:weightSum="1">
 
     <LinearLayout
         android:id="@+id/LinearLayout01"
@@ -23,59 +24,60 @@
             android:text="MSP"
             android:textColor="#ffffff"
             android:textSize="22dp"
-            android:textStyle="bold" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/LinearLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="right"
-        android:orientation="vertical"
-        android:padding="15dp" >
-
-        <Button
-            android:id="@+id/btn_calender"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#000000"
-            android:padding="10dp"
-            android:text="Calendar"
-            android:textColor="#ffffff"
-            android:textSize="22dp"
             android:textStyle="bold"
-            android:layout_gravity="center_horizontal" />
+            android:layout_marginTop="52dp"
+
+            />
+
 
     </LinearLayout>
 
     <ListView
         android:id="@+id/lv_android"
         android:layout_width="match_parent"
-        android:layout_height="273dp" >
+        android:layout_height="81dp"
+        android:layout_weight="0.74">
     </ListView>
+    <EditText
+        android:id="@+id/event"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Type event name here"
+        android:inputType="textEmailAddress" />
 
 
-    <Button
-        android:id="@+id/button2"
+    <DatePicker
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#000000"
-        android:padding="10dp"
-        android:text="Add event"
-        android:textColor="#ffffff"
-        android:textSize="22dp"
-        android:textStyle="bold"
-        android:layout_gravity="center_horizontal" />
+        android:id="@+id/datePicker2"
+        android:layout_gravity="center_horizontal"
+        android:datePickerMode="spinner" />
+
     <Button
         android:id="@+id/update"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#000000"
-        android:text="update"
+        android:text="Add Event"
         android:textColor="#ffffff"
         android:textSize="22dp"
         android:textStyle="bold"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="22dp" />
+        android:layout_marginTop="22dp"
+        android:layout_marginBottom="22dp"
+        android:paddingLeft="5dp"
+        android:padding="5dp" />
+
+    <Button
+        android:id="@+id/btn_calender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:padding="10dp"
+        android:text="Calendar"
+        android:textColor="#ffffff"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal" />
 
 </LinearLayout>
